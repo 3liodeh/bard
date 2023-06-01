@@ -4,7 +4,8 @@ import os
 
 os.environ['_BARD_API_KEY']="XAhr4hmTK4v2pnZB4rzBvSjAeDSMOF5DtqO42EfHGYOQL2i66RcFQJD-eh9SknrVElY-iw."
 
-
+Bard().get_answer(str("hi))['content']
+                      
 def appearance():
     dark_theme = """
         <style>
@@ -19,6 +20,7 @@ def appearance():
         justify-content: center;
         height: 100vh;
         text-align: center;}
+        
                                           
        .stTextInput label {
         display: flex;
@@ -30,9 +32,6 @@ def appearance():
         [data-testid="stHeader"]{
             background-color: #000000;
             }
-    .css-pxxe24 {
-    visibility: hidden;
-    }
         </style>
         """
     st.markdown(dark_theme, unsafe_allow_html=True)
@@ -44,8 +43,9 @@ st.title('Ask Bard')
 
 # Create a box container
 with st.container():
-    # Add content inside the box
+    
     text = st.text_input('Enter your text')
+    
     click=st.button("ASK")
     if click:
         st.write('The asnwer :', Bard().get_answer(str(text))['content'])
