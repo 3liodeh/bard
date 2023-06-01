@@ -4,7 +4,7 @@ import os
 
 os.environ['_BARD_API_KEY']="XAhr4hmTK4v2pnZB4rzBvSjAeDSMOF5DtqO42EfHGYOQL2i66RcFQJD-eh9SknrVElY-iw."
 
-Bard().get_answer(str("hi))['content']
+print(Bard().get_answer(str("hi))['content'])
                       
 def appearance():
     dark_theme = """
