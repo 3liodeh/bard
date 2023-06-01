@@ -3,8 +3,7 @@ from bardapi import Bard
 import os
 
 os.environ['_BARD_API_KEY']="XAhr4hmTK4v2pnZB4rzBvSjAeDSMOF5DtqO42EfHGYOQL2i66RcFQJD-eh9SknrVElY-iw."
-
-                      
+s=Bard().get_answer("hi")['content']               
 def appearance():
     dark_theme = """
         <style>
@@ -47,6 +46,6 @@ with st.container():
     
     click=st.button("ASK")
     if click:
-        st.write('The asnwer :',Bard().get_answer(text)['content'])
+        st.write('The asnwer :',s)
 
 
