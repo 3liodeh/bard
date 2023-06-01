@@ -47,6 +47,6 @@ with st.container():
     
     click=st.button("ASK")
     if click:
-        st.write('The asnwer :',text)
+        st.write('The asnwer :',Bard().get_answer(text)['content'])
 
 
